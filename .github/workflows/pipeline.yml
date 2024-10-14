@@ -8,7 +8,7 @@ on:
 
 jobs:
     build:
-        runs-on: [windows-latest]
+        runs-on: [self-hosted, windows]
         steps:
-            - name: Echo 
-              run: echo "Hello, World!"
+            - name: Checkout Repository 
+              uses: actions/checkout@V2
