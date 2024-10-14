@@ -12,3 +12,6 @@ jobs:
         steps:
             - name: Checkout Repository 
               uses: actions/checkout@V2
+            
+            - name: Restore Dependencies
+              run: dotnet restore ${{ github.workflow }} --runtime ${{ vars.workflow }} -- no-cache
