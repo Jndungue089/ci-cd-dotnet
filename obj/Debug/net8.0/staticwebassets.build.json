@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "RGSkyxobkpiUBpAeRZ+c6KHUN8uFzJG9ZkMPZ6KDMMI=",
+  "Source": "ci-cd-dotnet",
+  "BasePath": "_content/ci-cd-dotnet",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

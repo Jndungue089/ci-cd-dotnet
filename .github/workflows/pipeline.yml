@@ -14,4 +14,7 @@ jobs:
               uses: actions/checkout@V2
             
             - name: Restore Dependencies
-              run: dotnet restore ${{ github.workflow }} --runtime ${{ vars.workflow }} -- no-cache
+              run: dotnet restore ${{ github.workspace }} --runtime ${{ vars.runtime }} --no-cache
+            
+            - name: Publish
+              run: dotnet publish ${{ github.workspace }} --runtime ${{ vars.runtime }} --self-contained -Property:PublishDir=${{ github.workspace }}/publish --no-restore --configuration Release
