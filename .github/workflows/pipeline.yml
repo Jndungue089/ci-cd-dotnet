@@ -14,7 +14,13 @@ jobs:
               uses: actions/checkout@v4
             
             - name: Restore Dependencies
-              run: dotnet restore ${{ github.workspace }} --runtime win-x64 --no-cache
+              run: dotnet restore ${{ github.workspace }} --runtime ${{ vars.RUNTIME }} --no-cache
             
             - name: Publish
-              run: dotnet publish ${{ github.workspace }} --runtime win-x64 --self-contained -Property:PublishDir=${{ github.workspace }}/publish --no-restore --configuration Release
+              run: dotnet publish ${{ github.workspace }} --runtime ${{ vars.RUNTIME }} --self-contained -Property:PublishDir=${{ github.workspace }}/publish --no-restore --configuration Release
+
+            - name: Archive Artifacts
+              uses: actions/upload-artifact@v4
+              with:
+                name: ci-cd-dotnet
+                path: ${{ github.workspace }}/publish/*
