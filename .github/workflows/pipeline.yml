@@ -16,5 +16,5 @@ jobs:
             - name: Restore Dependencies
               run: dotnet restore ${{ github.workspace }} --runtime win-x64 --no-cache
             
-            # - name: Publish
-            #   run: dotnet publish ${{ github.workspace }} --runtime ${{ vars.runtime }} --self-contained -Property:PublishDir=${{ github.workspace }}/publish --no-restore --configuration Release
+            - name: Publish
+              run: dotnet publish ${{ github.workspace }} --runtime win-x64 --self-contained -Property:PublishDir=${{ github.workspace }}/publish --no-restore --configuration Release
