@@ -10,11 +10,11 @@ jobs:
     build:
         runs-on: [self-hosted, Windows]
         steps:
-            - name: Checkout Repository 
-              uses: actions/checkout@V2
+            # - name: Checkout Repository 
+            #   uses: actions/checkout@V2
             
             - name: Restore Dependencies
-              run: dotnet restore ${{ github.workspace }}/src/ci-cd-dotnet.sln --runtime ${{ vars.runtime }} --no-cache
+              run: dotnet restore ${{ github.workspace }}/ci-cd-dotnet.sln --runtime ${{ vars.runtime }} --no-cache
             
-            # - name: Publish
-            #   run: dotnet publish ${{ github.workspace }} --runtime ${{ vars.runtime }} --self-contained -Property:PublishDir=${{ github.workspace }}/publish --no-restore --configuration Release
+            - name: Publish
+              run: dotnet publish ${{ github.workspace }} --runtime ${{ vars.runtime }} --self-contained -Property:PublishDir=${{ github.workspace }}/publish --no-restore --configuration Release
