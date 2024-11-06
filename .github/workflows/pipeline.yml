@@ -24,3 +24,6 @@ jobs:
               with:
                 name: ci-cd-dotnet
                 path: ${{ github.workspace }}/publish/*
+
+            - name: Run Application
+              run: ${{ github.workspace }}/publish/ci-cd-dotnet.exe
