@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ci-cd-dotnet")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd071d7766dc5ce9d2d3792b6c8d0530ce9355e8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+09c767c5cc9569a7cab25546185e4def4f144787")]
 [assembly: System.Reflection.AssemblyProductAttribute("ci-cd-dotnet")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ci-cd-dotnet")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
